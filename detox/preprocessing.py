@@ -1,7 +1,8 @@
 import os
+from typing import Iterable, Union
+
 import emoji
 import pandas as pd
-from typing import Iterable, Union
 
 from .scoring import BLEUScorer
 

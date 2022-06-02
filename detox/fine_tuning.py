@@ -1,6 +1,7 @@
+from typing import Any, Dict, Iterable, Union
+
 import torch
 from tqdm import tqdm
-from typing import Any, Dict, Iterable, Union
 
 
 def forward(model, batch):
@@ -64,4 +65,3 @@ def run_finetuning(model,
         train(current_epoch, model, train_loader, optimizer, model_params)
         if current_epoch in save_model_when:        
             torch.save(model, f'./model-{current_epoch:02d}.dump')
-            

@@ -1,10 +1,9 @@
-import pandas as pd
-
-from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
-from sklearn.metrics import mean_squared_error as mse
-from scipy.stats import pearsonr
-
 from typing import Dict, Iterable
+
+import pandas as pd
+from nltk.translate.bleu_score import SmoothingFunction, sentence_bleu
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_squared_error as mse
 
 
 class BLEUScorer:

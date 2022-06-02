@@ -1,23 +1,20 @@
-import numpy as np
-import pandas as pd
-
+import argparse
 import json
+import os
+import sys
+from collections import defaultdict
 from pathlib import Path
 
-import os, sys
-from dotenv import load_dotenv
-
-from collections import defaultdict
-from tqdm import tqdm
-
+import numpy as np
+import pandas as pd
 import torch
+from dotenv import load_dotenv
+from tqdm import tqdm
 from transformers import AutoTokenizer
 
-from detox.preprocessing import collect_answers
 from detox.datasets import ScoredSentencePairDataset
-from detox.models import SkorBERT as SkorBERTRegressor, SkorBERT
-
-import argparse
+from detox.models import SkorBERT as SkorBERTRegressor
+from detox.preprocessing import collect_answers
 
 #region Command Line Arguments
 parser = argparse.ArgumentParser()

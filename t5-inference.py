@@ -1,19 +1,15 @@
+import argparse
+
 import numpy as np
 import pandas as pd
-
 import torch
 from torch.utils.data import DataLoader
-
+from tqdm import tqdm
 from transformers import T5Tokenizer
 
 from detox.datasets import DetoxificationDataset
 from detox.preprocessing import preprocess
 from detox.scoring import BLEUScorer
-
-from tqdm import tqdm
-
-
-import argparse
 
 #region Command Line Arguments
 parser = argparse.ArgumentParser()

@@ -1,15 +1,13 @@
-import pandas as pd
+import argparse
 
+import pandas as pd
 import torch
 from torch.utils.data import DataLoader
-
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 
-from detox.preprocessing import preprocess, expand
-from detox.fine_tuning import run_finetuning
 from detox.datasets import DetoxificationDataset
-
-import argparse
+from detox.fine_tuning import run_finetuning
+from detox.preprocessing import expand, preprocess
 
 #region Command Line Arguments
 parser = argparse.ArgumentParser()

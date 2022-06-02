@@ -1,24 +1,19 @@
-import numpy as np
-import pandas as pd
-
-from tqdm import tqdm
-
-import cloudpickle, json
+import argparse
+import json
 from pathlib import Path
-
 from typing import Any, Dict
 
+import cloudpickle
+import numpy as np
+import pandas as pd
 import torch
-
+from tqdm import tqdm
 from transformers import AutoTokenizer
 
 from detox.datasets import ScoredSentencePairDataset
-from detox.scoring import calc_metrics
-from detox.models import SkorBERT
 from detox.losses import cross_entropy
-
-import argparse
-
+from detox.models import SkorBERT
+from detox.scoring import calc_metrics
 
 #region Command Line Arguments
 parser = argparse.ArgumentParser()

@@ -1,8 +1,9 @@
+from typing import Iterable, Union
+
 import pandas as pd
 import torch
 from torch.utils.data import Dataset
 from tqdm import tqdm
-from typing import Iterable, Union
 
 
 class DetoxificationDataset(Dataset):
