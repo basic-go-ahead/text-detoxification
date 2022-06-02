@@ -10,7 +10,7 @@ class SkorBERT(nn.Module):
         self._activation = nn.Sigmoid()
 
 
-    def forward(self, input_ids=None, attention_mask=None, token_type_ids=None):
+    def forward(self, input_ids, attention_mask, token_type_ids):
         x = self._model.forward(input_ids, attention_mask, token_type_ids)
         x = self._linear(x.logits)
         return self._activation(x)
